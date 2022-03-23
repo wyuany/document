@@ -31,7 +31,7 @@ mTLS 是Mutual TLS, 意味着客户端和服务器端要相互认证。
 7. 客户端和服务器通过加密的TLS连接传输数据
 
 ### mTLS初体验：Hello-world
-1. 第一步是创建一个客户端和服务器都信任的certificate authority (CA)。这个CA是一个X.509证书，又公开密钥加密的公钥和私钥组成。用到的命令是：
+1. 第一步是创建一个客户端和服务器都信任的certificate authority (CA)。这个CA是一个X.509证书，由公开密钥加密的公钥和私钥组成。用到的命令是：
 `openssl req   -new   -x509   -nodes   -days 365   -subj '/CN=my-ca'   -keyout ca.key   -out ca.crt`
 
 创建后，可以查看ca.crt的详细情况，签发机构是`CN=my-ca`.
